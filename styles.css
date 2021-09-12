@@ -19,6 +19,14 @@ body {
   /* height: 100vh; */
   margin: 0;
 }
+.heading {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.description {
+  font-size: 20px;
+  margin: 0;
+}
 .draggable-list {
   list-style-type: none;
   padding: 0;
@@ -49,6 +57,7 @@ body {
 .draggable-list .place-name {
   margin: 0 20px 0 0;
   padding: 0 50px;
+  font-size: 18px;
 }
 .draggable-list li.right .place-name {
   color: #0fd354;
