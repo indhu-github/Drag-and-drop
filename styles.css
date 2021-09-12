@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+
+:root {
+  --border-color: #e5e4e3;
+  --background-color: #c3c4f5;
+  --text-color: #34444f;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 0;
+}
+.draggable-list {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+.draggable-list li {
+  background-color: #fff;
+  display: flex;
+  flex: 1;
+}
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+.draggable-list .number {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+}
+.draggable-list .place-name {
+  margin: 0 20px 0 0;
+  padding: 0 50px;
+}
+.draggable {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 15px;
+}
