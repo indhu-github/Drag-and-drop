@@ -26,10 +26,10 @@ function createList() {
   [...touristPlaces]
     .map((item) => ({ value: item, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(item=>item.value)
+    .map((item) => item.value)
     .forEach((place, index) => {
       const listItem = document.createElement("li");
-
+      //   listItem.classList.add("over");
       listItem.setAttribute("data-index", index);
       listItem.innerHTML = `
         <span class="number">${index + 1}</span>

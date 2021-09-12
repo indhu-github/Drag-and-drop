@@ -42,9 +42,19 @@ body {
   height: 60px;
   font-size: 28px;
 }
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
 .draggable-list .place-name {
   margin: 0 20px 0 0;
   padding: 0 50px;
+}
+.draggable-list li.right .place-name {
+  color: #0fd354;
+}
+.draggable-list li.wrong .place-name {
+  color: #c42424ce;
 }
 .draggable {
   cursor: pointer;
@@ -53,4 +63,15 @@ body {
   align-items: center;
   flex: 1;
   padding: 15px;
+}
+.check-btn {
+  background-color: var(--background-color);
+  border: none;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.check-btn:active {
+  transform: scale(0.98);
 }
