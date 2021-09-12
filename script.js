@@ -64,6 +64,7 @@ function dragDrop() {
   this.classList.remove("over");
 }
 
+//swap list items during drag and drop
 function swapItems(fromIndex, toIndex) {
   let itemOne = listItems[fromIndex].querySelector(".draggable");
   let itemTwo = listItems[toIndex].querySelector(".draggable");
@@ -71,6 +72,21 @@ function swapItems(fromIndex, toIndex) {
   listItems[fromIndex].appendChild(itemTwo);
   listItems[toIndex].appendChild(itemOne);
 }
+
+//check the order of list items
+function checkOrder() {
+  listItems.forEach((listItem, index) => {
+    const placeName = listItem.querySelector(".draggable").innerText.trim();
+
+    if (placeName !== touristPlaces[index]) {
+      listItem.classList.add("wrong");
+    } else {
+      listItem.classList.remove("wrong");
+      listItem.classList.add("right");
+    }
+  });
+}
+
 function addEventListeners() {
   const draggables = document.querySelectorAll(".draggable");
   const dragListItems = document.querySelectorAll(".draggable-list li");
@@ -86,3 +102,4 @@ function addEventListeners() {
     item.addEventListener("dragleave", dragLeave);
   });
 }
+checkButton.addEventListener("click", checkOrder);
